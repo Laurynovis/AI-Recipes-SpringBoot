@@ -2,7 +2,7 @@ package backend_receitas.controller;
 
 import backend_receitas.dto.UserRegisterDto;
 import backend_receitas.dto.UserResponseDto;
-import backend_receitas.service.UserService;
+import backend_receitas.service.USerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private final UserService userService;
+    private final USerService userService;
 
-    public AuthController(UserService userService) {
+    public AuthController(USerService userService) {
         this.userService = userService;
     }
 

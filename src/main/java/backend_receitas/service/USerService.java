@@ -8,12 +8,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class USerService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder; // Injetado via Spring Security
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public USerService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }

@@ -27,6 +27,11 @@ public class Receita {
     @Column(name = "tempo_preparo_minutos")
     private Integer tempoPreparoMinutos;
 
+    // AQUI ESTÁ O RELACIONAMENTO (Agora dentro da classe!)
+    @ManyToOne
+    @JoinColumn(name = "user_id") // Isso vai criar a coluna "user_id" na tabela de receitas
+    private User user;
+
     // @ElementCollection cria uma tabela auxiliar para guardar a lista de Strings
     @ElementCollection
     @CollectionTable(name = "receita_ingredientes", joinColumns = @JoinColumn(name = "receita_id"))
